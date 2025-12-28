@@ -1,1 +1,25 @@
 export PATH="/opt/homebrew/bin:$PATH"
+
+# shell vi setting
+set -o vi
+export KEYTIMEOUT=1
+
+function zle-keymap-select {
+  if [[ $KEYMAP == vicmd ]]; then
+    echo -ne '\e[1 q'   # Normal: block
+  else
+    echo -ne '\e[5 q'   # Insert: bar
+  fi
+}
+
+function zle-line-init {
+  echo -ne '\e[5 q'     # 새 프롬프트 시작 시 Insert
+}
+
+function zle-line-finish {
+  echo -ne '\e[5 q'     # 외부 프로그램(nvim 등) 종료 후 복구
+}
+
+zle -N zle-keymap-select
+zle -N zle-line-init
+zle -N zle-line-finish
