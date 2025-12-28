@@ -25,10 +25,6 @@ dotfiles
 │   ├── .zshrc.common
 │   ├── .zshrc.mac
 │   ├── .zshrc.linux
-│   ├── .zshrc.alias
-│   ├── .zshrc.env
-│   ├── .zshrc.keybind
-│   └── .zshrc.fzf
 │
 ├── p10k
 │   └── .p10k.zsh
@@ -40,8 +36,6 @@ dotfiles
 ├── fzf
 │   └── .fzf.zsh
 │
-└── git
-    └── .gitconfig
 ```
 
 ---
@@ -91,7 +85,6 @@ stow zsh
 stow p10k
 stow nvim
 stow fzf
-stow git
 ```
 
 ---
@@ -157,7 +150,6 @@ stow -D zsh
 stow -D p10k
 stow -D nvim
 stow -D fzf
-stow -D git
 ```
 
 ---
