@@ -1,7 +1,23 @@
-# ===== os specific =====
+# ===== OS specific =====
 case "$(uname)" in
-  Darwin) /opt/homebrew/bin/fastfetch ;;
-  Linux)  echo "Linux fastfetch add" ;; 
+  Darwin)
+    # macOS: Homebrew 환경 먼저 적용
+    if [[ -x "/opt/homebrew/bin/brew" ]]; then
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
+
+    # 이후 macOS 전용 명령
+    /opt/homebrew/bin/fastfetch
+    ;;
+  Linux)
+    # Linux: Homebrew 환경 먼저 적용
+    if [[ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]]; then
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    fi
+
+    # 이후 Linux 전용 명령
+    fastfetch
+    ;;
 esac
 
 # ===== base =====
