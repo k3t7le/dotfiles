@@ -12,7 +12,7 @@ GNU Stow 기반 심볼릭 링크 방식으로 관리한다.
 - powerlevel10k
 - fzf
 - neovim
-- gitconfig
+- ghostty
 
 ---
 
@@ -85,6 +85,7 @@ stow zsh
 stow p10k
 stow nvim
 stow fzf
+stow ghostty
 ```
 
 ---
@@ -150,6 +151,7 @@ stow -D zsh
 stow -D p10k
 stow -D nvim
 stow -D fzf
+stow -D ghostty
 ```
 
 ---
