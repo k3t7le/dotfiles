@@ -7,7 +7,7 @@ case "$(uname)" in
     fi
 
     # 이후 macOS 전용 명령
-    /opt/homebrew/bin/fastfetch
+    fastfetch
     ;;
   Linux)
     # Linux: Homebrew 환경 먼저 적용
