@@ -1,12 +1,27 @@
+#######################################
+# linux only
+#######################################
 alias cat='batcat'
 
-# bun completions
-[ -s "/home/kettle/.bun/_bun" ] && source "/home/kettle/.bun/_bun"
-
+#######################################
 # bun
+#######################################
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+#######################################
+# nvm
+#######################################
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# nvm core
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# nvm completion
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+
+#######################################
+# bun completions (맨 마지막)
+#######################################
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
+
