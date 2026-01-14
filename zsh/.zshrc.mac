@@ -1,3 +1,10 @@
 # only mac alias
 alias cat='bat'
 
+
+export PATH="$HOME/.npm-global/bin:~/.bun/bin:$PATH"
+
+
+# bun completions
+[ -s "/Users/k3t7le/.bun/_bun" ] && source "/Users/k3t7le/.bun/_bun"
+
