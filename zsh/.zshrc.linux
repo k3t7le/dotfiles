@@ -26,3 +26,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
 
+# pipx
+export PATH="$PASH:~/.local/bin"
