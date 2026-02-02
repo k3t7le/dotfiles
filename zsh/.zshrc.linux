@@ -27,4 +27,4 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # pipx
-export PATH="$PASH:~/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
