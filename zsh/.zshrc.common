@@ -124,4 +124,6 @@ tree() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-
+# API Keys
+# 1. MCP(TAVILY)
+export TAVILY_API_KEY=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
